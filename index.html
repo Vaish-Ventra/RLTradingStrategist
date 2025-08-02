@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OHLCV Prediction</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- <div class="cover">
+        <div class="block">
+            <span class="heading">RL-Trading Strategist</span>
+            <span class="subheading"> Reinforcement Learning- Based Algorithm Trading in Cryptocurrency Markets</span>
+        </div>
+    </div> -->
+  <header class="navbar">
+    <div class="logo">RL Strategist</div>
+    <nav>
+      <ul class="nav-links">
+        <ul class="nav-links">
+          <div>
+            <li><a href="#home">Home</a></li>
+          </div>
+          <div>
+            <li><a href="#strategy">Strategy</a></li>
+          </div>
+          <div>
+            <li><a href="#ohlcv-section">Predictions</a></li>
+          </div>
+          <div>
+            <li><a href="#about">About</a></li>
+          </div>
+        </ul>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content glass-card">
+      <h1 class="animate">RL-Trading Strategist</h1>
+      <p class="animate">Reinforcement Learning + XGBoost for Smarter Crypto Predictions</p>
+      <a href="#ohlcv-section" class="cta-btn animate">Start Predicting</a>
+    </div>
+  </section>
+  <div class="separation"></div>
+  <div class="container" id="ohlcv-section">
+    <h2>Predict OHLCV</h2>
+    <div class="box">
+      <div class="label:">
+
+        <label>Timestamp</label>
+        <input type="datetime-local" set="3600" id="timestamp">
+      </div>
+      <div class="label:">
+
+        <select id="asset">
+          <option value="btc">BTC</option>
+          <option value="eth">ETH</option>
+        </select>
+      </div>
+      <button id="predict-btn">Predict</button>
+    </div>
+    <div id="results"></div>
+  </div>
+  <section class="RL-prediction">
+    <h2>Predicting Action</h2>
+    <div class="form-box-RL">
+      <div class="label:">
+        <label>Timestamp</label>
+        <input type="datetime-local" step="3600" id="timestampRL" />
+      </div>
+      <div class="label">
+
+        <select id="assetRL">
+          <option value="btc">BTC</option>
+          <option value="eth">ETH</option>
+        </select>
+      </div>
+      <div class="label">
+        <label>Balance</label>
+        <input type="number" placeholder="Enter the amount:" id="balance">
+      </div>
+      <div class="label">
+        <label>Holdings</label>
+        <input type="number" placeholder="Enter the amount:" id="holdings">
+      </div>
+      <div class="label">
+        <label>Market conditions</label>
+        <select id="assetMarket">
+          <option value="Standard Market">Standard Market</option>
+          <option value="High Volatility Market">High Volatility Market</option>
+          <option value="Bull Market">Bull Market</option>
+          <option value="Bear Market">Bear Market</option>
+          <option value="Sideways Market">Sideways Market</option>
+        </select>
+      </div>
+      <button id="predict-btn-RL">Predict</button>
+    </div>
+    <div id="resultsRL"></div>
+
+  </section>
+  <script src="script.js"></script>
+</body>
+
+</html>
