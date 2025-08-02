@@ -1,0 +1,420 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family:'Ubuntu';
+  font-size: 20px;
+}
+body {
+    background-color: rgb(3, 2, 6);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .cover{
+    background-color:rgb(119, 94, 169);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url("bg.jpg");
+    backdrop-filter: blur(10px);
+    background-size: cover;
+    background-position: center center;
+    margin: 60px 10vw ;
+    height: 644px;
+    width: 80vw;
+  }
+
+  .block{
+  background-color:rgb(11, 50, 83);
+  opacity: 0.65;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.heading{
+   font-family:'Oswald';
+   color: rgb(255, 255, 255);
+   font-size: 60px;
+   margin:  20px;
+}
+.subheading{
+  font-size: 30px;
+  color: rgb(204, 185, 238);
+} */
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #0a0a0a;
+  border-bottom: 1px solid #1e1e1e;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00ffe7;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+
+
+
+.nav-links a:hover {
+  color:#00ffe7;
+  transform: scale(1.05);
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://thumbs.dreamstime.com/b/abstract-neon-blockchain-hexagons-futuristic-digital-network-background-349741328.jpg');
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(120deg, #0f0f0f, #111111, #0f0f0f); */
+  /* background-size: 400% 400%; */
+  /* animation: gradientShift 15s ease infinite; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional overlay effect */
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Glass-style card */
+.glass-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(255, 226, 226);
+  height:500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+/* Heading Animation */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1.5s forwards;
+}
+
+.animate:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.animate:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Hero Typography */
+.hero-content h1 {
+  font-size: 3.2rem;
+  color: #00ffe7;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #00ffe7;
+  color: #000;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 12px #00ffe7aa;
+}
+
+.cta-btn:hover {
+  background: #00c2b7;
+  transform: scale(1.05);
+}
+/* 
+
+/* Prediction Form Section */
+.container,.RL-prediction {
+  /* background: #151414;
+  margin: 60px 10vw;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.1);
+  animation: fadeInUp 2.5s ease forwards; */
+    background: #201f1f;
+  margin: 60px 10vw;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 231, 0.1);
+  animation: fadeInUp 2.5s ease forwards;
+}
+
+.container h2, .RL-prediction h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffe7;
+}
+
+ .box{
+    /* display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    padding: 10px; */
+     display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.form-box-RL{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+label{
+  font-size: 20px;
+  padding: 10px;
+}
+
+input, select, button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+  margin:8px;
+}
+
+input, select {
+  background: #2c2b2b;
+  color: #ffffff;
+}
+
+input:focus, select:focus {
+  border: 1px solid #00ffe7;
+}
+
+button {
+  background: #00ffe7;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00c2b7;
+  transform: scale(1.05);
+}
+
+/* Spinner */
+.spinner {
+  border: 5px solid #1a1a1a;
+  border-top: 5px solid #00ffe7;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Results */
+#results {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeInUp 1s ease;
+}
+#resultsRL {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeInUp 1s ease;
+}
+.prediction-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #00ffe755;
+  width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.prediction-card:hover {
+  transform: scale(1.02);
+} 
+
+.prediction-card-RL{
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #00ffe755;
+  width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.prediction-card-RL:hover {
+  transform: scale(1.02);
+} 
+/* 
+.container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #00ffe755;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+
+.container {
+    background: rgb(32, 32, 32);
+    border-radius: 8px;
+    text-align: center;
+    margin: 60px 10vw ;
+    padding: 20px;
+    height: 200px;
+    width: 80vw;
+}
+
+.box{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    padding: 10px;
+}
+
+.container>h2{
+    font-size: 30px;
+}
+input, select, button {
+    margin: 10px;
+    padding: 10px;
+}
+
+#results{
+    margin: 10px;
+    padding: 10px;
+} */
