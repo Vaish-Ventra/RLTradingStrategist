@@ -36,7 +36,7 @@ The platform is built with **FastAPI** as the backend and features a simple **we
 - **Deployment**  
   - Backend: **FastAPI** for REST API endpoints.  
   - Frontend: Web interface for predictions & strategy recommendations.  
-  - Demo available [here](https://drive.google.com/file/d/1flgTMzg5V5RG8PklFU77W94gdCAQGdiv/view).  
+  - Demo available [here](https://drive.google.com/file/d/1flgTMzg5V5RG8PklFU77W94gdCAQGdjy/view).  
 
 ---
 
